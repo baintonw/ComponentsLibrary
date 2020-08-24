@@ -9,20 +9,58 @@ const SignIn = () => {
             <div className="box">
                 <input type="checkbox" id="toggle" className="box__toggle"></input>
                 <img src="https://picsum.photos/300"/>
+                {/* Sign up form */}
                 <form className="form form__register" action="">
                     <h1 className="form__title">Sign Up</h1>
+                    {/* User */}
+                    <div className="form__helper">
+                        <input className="form__input" id="new-user" type="text" name="user" placeholder="User"></input>
+                        <label className="form__label" for="new-user">User</label>
+                    </div>
+                    {/* Email */}
+                    <div className="form__helper">
+                        <input className="form__label" type="email" name="email" id="email" placeholder="Email"></input>
+                        <label className="form__label" for="email">Email</label>
+                    </div>
 
+                    {/* Password */}
+                    <div className="form__helper">
+                        <input className="form__label" type="password" name="password" id="new-user-password"></input>
+                        <label for="new-user-password">Password</label>
+                    </div>
+                    {/* Confirm Password */}
+                    <div className="form__helper">
+                        <input className="form__label" type="password" name="password" id="confirm-password"></input>
+                        <label for="new-user-password">Confirm Password</label>
+                    </div>
+                    {/* Submit Button */}
+                    <button type="submit" className="form__button">Register</button>
+                    <p className="form__text">Already have an account?</p>
+                    <label className="form__link">Sign In!</label>
+                </form>
+
+                {/* Sign In form (default) */}
+                <form className="form form__register" action="">
+                    <h1 className="form__title">Sign In</h1>
+
+                    {/* User */}
                     <div className="form__helper">
                         <input className="form__input" id="new-user" type="text" name="user" placeholder="User"></input>
                         <label className="form__label" for="new-user">User</label>
                     </div>
 
+                    {/* Password */}
                     <div className="form__helper">
-                        <input className="form__label" type="email" name="email" id="email" placeholder="Email"></input>
-
+                        <input className="form__label" type="password" name="password" id="new-user-password"></input>
+                        <label for="new-user-password">Password</label>
                     </div>
 
+                    {/* Submit Button */}
+                    <button type="submit" className="form__button">Log in</button>
+                    <p className="form__text">Don't have an account?</p>
+                    <label className="form__link">Sign Up!</label>
                 </form>
+
             </div>
 
 
