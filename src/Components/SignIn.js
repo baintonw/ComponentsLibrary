@@ -25,13 +25,13 @@ const SignIn = () => {
                     </div>
                     {/* Password */}
                     <div className="form__helper">
-                        <input className="form__input" type="password" name="password" id="new-user-password"></input>
+                        <input className="form__input" type="password" name="password" id="new-user-password" placeholder="Password"></input>
                         <label className="form__label" for="new-user-password">Password</label>
                     </div>
                     {/* Confirm Password */}
                     <div className="form__helper">
-                        <input className="form__input" type="password" name="password" id="confirm-password"></input>
-                        <label className="form__label" for="new-user-password">Confirm Password</label>
+                        <input className="form__input" type="password" name="password" id="confirm-password" placeholder="Confirm Password"></input>
+                        <label className="form__label" for="confirm-password">Confirm Password</label>
                     </div>
 
                     {/* Submit Button */}
