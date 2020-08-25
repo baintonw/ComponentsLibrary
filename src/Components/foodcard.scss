@@ -1,0 +1,19 @@
+.container {
+    background-color: #ffe7ce;
+    height: 100vh;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+}
+
+.foodCard {
+    width: 45%;
+    background-color: white;
+    font-size: 2rem;
+    border-radius: 3px;
+    
+
+    display: flex;
+
+}
