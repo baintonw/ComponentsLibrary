@@ -12,8 +12,63 @@
     background-color: white;
     font-size: 2rem;
     border-radius: 3px;
-    
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 4;
+    grid-gap: 1rem;
+    padding: 2rem;
 
-    display: flex;
+    border: 1px solid black;
+
+    &__image {
+        border: 1px solid blueviolet;
+        display: block;
+        // margin: 0 auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        // margin-left: 10px;
+    }
+
+    &__info-box {        
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        grid-column: 2 / 6;
+    }
+
+    &__name {
+        border: 1px solid black;
+        flex: 0 0 50%;
+        // width: 50%;
+    }
+
+    &__quantity {
+
+    }
+
+    &__who {
+        border: 1px solid black;
+        flex: 0 0 50%;
+        justify-items: end;
+    }
+
+    &__what {
+        border: 1px solid black;
+
+        flex: 0 0 50%;
+    }
+
+    &__location {
+        border: 1px solid black;
+
+    }
+
+    &__description{
+        flex: 0 0 50%;
+        border: 1px solid salmon;
+        grid-column: 1 / 6;
+        grid-row: 2 / 4;
+    }
 
 }
