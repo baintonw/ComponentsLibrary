@@ -9,20 +9,26 @@
 
 .foodCard {
     width: 45%;
+
+    height: 50%;
+    min-height: 40%;
     background-color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 3px;
     display: grid;
-    grid-template-columns: 6;
-    grid-template-rows: 4;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 6rem 4rem;
     grid-gap: 1rem;
-    padding: 2rem;
+    padding: 1.2rem;
 
     border: 1px solid black;
 
     &__image {
         border: 1px solid blueviolet;
         display: block;
+        //images should fill container
+        width: 100%;
+        height: auto;
         // margin: 0 auto;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -31,14 +37,14 @@
 
     &__info-box {        
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
         border: 1px solid black;
         grid-column: 2 / 6;
     }
 
     &__name {
-        border: 1px solid black;
+        // border: 1px solid black;
         flex: 0 0 50%;
         // width: 50%;
     }
@@ -48,19 +54,22 @@
     }
 
     &__who {
-        border: 1px solid black;
+        // border: 1px solid black;
         flex: 0 0 50%;
-        justify-items: end;
+        // justify-items: end;
+        text-align: right;
+
+        // text-
     }
 
     &__what {
-        border: 1px solid black;
+        // border: 1px solid black;
 
         flex: 0 0 50%;
     }
 
     &__location {
-        border: 1px solid black;
+        // border: 1px solid black;
 
     }
 
@@ -68,7 +77,18 @@
         flex: 0 0 50%;
         border: 1px solid salmon;
         grid-column: 1 / 6;
-        grid-row: 2 / 4;
+        grid-row: 2 / 3;
+
+        padding: 1rem;
+
+        font-size: 1.7rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    &__button {
+        height: 3.2rem;
+        grid-row: 3 / 4;
     }
 
 }
