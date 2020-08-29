@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //Styles
 import './foodcard.scss'
 
+
+
+//toggle card expand
+const expand = (e) => {
+    e.preventDefault();
+    console.log('expanding...', e.currentTarget)
+}
+
 const FoodCard = () => {
+    //State handlers
+    //state value - handling function - useState setting initial state 
+    const [count, setCount] = useState(0)
+    const [expanded, toggleExpand] = useState(false)
     return (
         <div className="container">
-            <div className="foodCard expand">
+            <div className={"foodCard" + (expanded ? " expand" : '')}>
                 <img className="foodCard__image" src="https://picsum.photos/200"></img>
                 <div className="foodCard__info-box">
                     <p className="foodCard__name">Bananas <span>#5</span></p>
@@ -19,7 +31,11 @@ const FoodCard = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque purus urna, faucibus nec placerat ac, semper eget leo. Cras sem massa, molestie vitae iaculis vitae, rutrum euismod leo. Vivamus faucibus libero arcu, feugiat porttitor mi luctus eget. Phasellus gravida posuere metus et euismod. Donec semper luctus tortor, eget lacinia sem.
                     </p>
                 </div>
-                <button className="foodCard__button">Expand</button>
+                <button onClick={(e) => toggleExpand(!expanded)} className="foodCard__button">Expand</button>
+                <button onClick={(e) => setCount(count + 1)} className="foodCard__button">Expand</button>
+                <p>You clicked count { count } times</p>
+                <p>Card is expanded? { expanded + ''}</p>
+
             </div>
         </div>
     )

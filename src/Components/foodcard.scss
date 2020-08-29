@@ -21,6 +21,7 @@
     grid-auto-rows: minmax(2rem, 10rem) minmax(0, auto) auto;;
 
     &.expand > &__description {
+        
         font-size: 1.7rem;
     }
 
