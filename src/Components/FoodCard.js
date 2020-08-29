@@ -6,7 +6,7 @@ import './foodcard.scss'
 const FoodCard = () => {
     return (
         <div className="container">
-            <div className="foodCard">
+            <div className="foodCard expand">
                 <img className="foodCard__image" src="https://picsum.photos/200"></img>
                 <div className="foodCard__info-box">
                     <p className="foodCard__name">Bananas <span>#5</span></p>
