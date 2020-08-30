@@ -21,10 +21,10 @@ const FoodCard = () => {
             <div className={"foodCard" + (expanded ? " expand" : '')}>
                 <img className="foodCard__image" src="https://picsum.photos/200"></img>
                 <div className="foodCard__info-box">
-                    <p className="foodCard__name">Bananas <span>#5</span></p>
-                    <p className="foodCard__who">Who</p>
-                    <p className="foodCard__what">What</p>
-                    <p className="foodCard__location">Location</p>
+                    <p className="foodCard__info-item foodCard__info-item--name">Bananas <span>#5</span></p>
+                    <p className="foodCard__info-item foodCard__info-item--who">Who</p>
+                    <p className="foodCard__info-item foodCard__info-item--what">What</p>
+                    <p className="foodCard__info-item foodCard__info-item--location">Location</p>
                 </div>
                 <div className="foodCard__description">
                     <p>
