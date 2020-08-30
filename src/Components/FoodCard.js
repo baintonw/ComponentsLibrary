@@ -32,10 +32,6 @@ const FoodCard = () => {
                     </p>
                 </div>
                 <button onClick={(e) => toggleExpand(!expanded)} className="foodCard__button">Expand</button>
-                <button onClick={(e) => setCount(count + 1)} className="foodCard__button">Expand</button>
-                <p>You clicked count { count } times</p>
-                <p>Card is expanded? { expanded + ''}</p>
-
             </div>
         </div>
     )

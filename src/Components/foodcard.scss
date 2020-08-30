@@ -9,10 +9,7 @@
 
 .foodCard {
     width: 45%;
-
-    // height: 50%;
     height: auto;
-    // min-height: 40%;
     background-color: white;
     font-size: 1.5rem;
     border-radius: 3px;
@@ -21,7 +18,7 @@
     grid-auto-rows: minmax(2rem, 10rem) minmax(0, auto) auto;;
 
     &.expand > &__description {
-        
+
         font-size: 1.7rem;
     }
 
@@ -31,7 +28,6 @@
     border: 1px solid black;
 
     &__image {
-        border: 1px solid blueviolet;
         display: block;
         //images should fill container
         width: 100%;
@@ -45,8 +41,6 @@
     }
 
     &__info-box {        
-        
-
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -55,9 +49,7 @@
     }
 
     &__name {
-        // border: 1px solid black;
         flex: 0 0 50%;
-        // width: 50%;
     }
 
     &__quantity {
@@ -65,41 +57,30 @@
     }
 
     &__who {
-        // border: 1px solid black;
         flex: 0 0 50%;
-        // justify-items: end;
         text-align: right;
-
-        // text-
     }
 
     &__what {
-        // border: 1px solid black;
-
         flex: 0 0 50%;
     }
 
     &__location {
-        // border: 1px solid black;
 
     }
 
     &__description{
         font-size: 0rem;
         transition: all .2s;
-        // height: 0%;
         overflow: hidden;
-    
-
         max-height: 100%;
+        padding: 1rem;
+
         flex: 0 0 50%;
-        border: 1px solid salmon;
         grid-column: 1 / 6;
         grid-row: 2 / 3;
 
-        padding: 1rem;
 
-        // font-size: 1.7rem;
         font-weight: 300;
         line-height: 1.6;
 
