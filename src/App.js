@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       {/* <SignIn></SignIn> */}
-      <FoodCard></FoodCard>
-      {/* <div className="wrapped-map-wrapper">
+      {/* <FoodCard></FoodCard> */}
+      <div className="wrapped-map-wrapper">
         <WrappedMap 
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
 
@@ -25,7 +25,7 @@ function App() {
           containerElement={<div style={{ height: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
-      </div> */}
+      </div>
       
     </div>
   );
