@@ -16,9 +16,11 @@ const FoodCard = () => {
     //state value - handling function - useState setting initial state 
     const [count, setCount] = useState(0)
     const [expanded, toggleExpand] = useState(false)
+    const [reversed, toggleReversed] = useState(false)
+
     return (
         <div className="container">
-            <div className={"foodCard" + (expanded ? " expand" : '')}>
+            <div className={"foodCard" + (expanded ? " expand" : '') + (reversed ? " reverse" : ' ')}>
                 <div className="foodCard__top-wrapper">
                     <img className="foodCard__image" src="https://picsum.photos/200"></img>
                     <div className="foodCard__info-box">
@@ -34,6 +36,8 @@ const FoodCard = () => {
                     </p>
                 </div>
     <button onClick={(e) => toggleExpand(!expanded)} className="foodCard__button">{expanded ? 'Less' : 'More'}</button>
+    <button onClick={(e) => toggleReversed(!reversed)} className="foodCard__button">{'Reverse'}</button>
+    
             </div>
         </div>
     )
