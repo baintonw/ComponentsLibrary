@@ -6,8 +6,9 @@ import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps'
 import './map.scss'
 
 const Map = () => {
+    console.log('Hello', process.env.REACT_APP_GOOGLE_KEY)
+
     return(
-        
             
             <GoogleMap 
                 defaultZoom={10} 
