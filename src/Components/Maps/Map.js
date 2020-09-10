@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps'
 
@@ -9,42 +9,45 @@ import './map.scss'
 import data from '../../data/random-points-nyc.json'
 
 const Map = () => {
-    // console.log('Hello', process.env.REACT_APP_GOOGLE_KEY)
-    // console.log('JSON data: ', data)
     const [selectedPoint, setSelectedPoint] = useState(null)
+    // new
+    const [selecetedMarker, setSelectedMarker] = useState(null)
 
     return(
-            
-            <GoogleMap 
-                defaultZoom={10} 
-                defaultCenter={{ lat: 40.712776, lng: -74.005974 }} 
-            >
-                {data.map((point) => (
-                    <Marker
-                        key={point.id}
-                        position={{ lat: point.latitude, lng: point.longitude }}
-                        onClick={() => {
-                            setSelectedPoint(point)
-                        }}
-
-                     />
-                ))}
-
-                { selectedPoint && (
-                    <InfoWindow
-                        key={selectedPoint.id}
-                        position={{ 
-                            lat: selectedPoint.latitude,
-                            lng: selectedPoint.longitude
-                        }}
-                        onCloseClick={() => setSelectedPoint(null)}
+        // Map
+        <GoogleMap 
+            defaultZoom={10} 
+            defaultCenter={{ lat: 40.712776, lng: -74.005974 }} 
+        >
+            {data.map((point) => (
+                // Marker - for each data point
+                <Marker
+                    key={point.id}
+                    position={{ lat: point.latitude, lng: point.longitude }}
+                    onClick={() => {
+                        console.log('Clicked this point: ', point)
+                        return setSelectedPoint(point)
+                    }}
                     >
-                        <p>Point Details</p>
-                    </InfoWindow>
-                )}
-            </GoogleMap>
-        
-        
+                </Marker>
+                    
+            ))}
+
+            {selectedPoint ?
+                (<InfoWindow
+                    key={selectedPoint.id}
+                    position={{ 
+                        lat: selectedPoint.latitude,
+                        lng: selectedPoint.longitude
+                    }}
+                    onCloseClick={() => setSelectedPoint(null)}
+                >
+                    <h1>Hello</h1>
+                </InfoWindow>)
+                :
+                null
+            }
+        </GoogleMap> 
     )
 }
 
