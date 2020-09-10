@@ -26,7 +26,8 @@ const Map = () => {
                     position={{ lat: point.latitude, lng: point.longitude }}
                     onClick={() => {
                         console.log('Clicked this point: ', point)
-                        return setSelectedPoint(point)
+                        setSelectedPoint(point)
+                        setSelectedMarker(point)
                     }}
                     >
                 </Marker>
@@ -41,6 +42,9 @@ const Map = () => {
                         lng: selectedPoint.longitude
                     }}
                     onCloseClick={() => setSelectedPoint(null)}
+                    onDomReady={() => {
+                        console.log('InfoWindow Children')
+                    }}
                 >
                     <h1>Hello</h1>
                 </InfoWindow>)
