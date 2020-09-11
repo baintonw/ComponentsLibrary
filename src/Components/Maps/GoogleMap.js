@@ -18,7 +18,7 @@ import {
 //     ComboboxList,
 //     ComboboxOption,
 //   } from "@reach/combobox";
-  import { formatRelative } from "date-fns";
+ import { formatRelative } from "date-fns";
 
 //SCSS styles
 import "./googlemap.scss"  
@@ -96,17 +96,17 @@ const Map = () => {
                         onClick={() => {
                             setSelected(marker)
                         }}
-                    />
-                    
-                    
+                    />   
                 ))}    
 
-                {selected ? (<InfoWindow position={{ lat: selected.lat, lng: selected.lng }}>
-                    <div>
-                        <h2>Bear Spotted!</h2>
-                        <p>Time: {formatRelative(selected.time, new Date())}</p>
-                    </div>
-                </InfoWindow>) : null}   
+                {selected ? (
+                    <InfoWindow position={{ lat: selected.lat, lng: selected.lng }}>
+                        <div>
+                            <h2>Bear Spotted!</h2>
+                            <p>Time: {formatRelative(selected.time, new Date())}</p>
+                        </div>
+                    </InfoWindow>
+                ) : null}   
 
             </GoogleMap>
         </div>
