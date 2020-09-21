@@ -6,9 +6,10 @@ import './App.css';
 
 // import 'node-sass';
 //Components
-import SignIn from './Components/SignIn'
-import FoodCard from './Components/FoodCard'
+import SignIn from './Components/Login/SignIn'
+import FoodCard from './Components/Cards/FoodCard'
 import WrappedMap from './Components/Maps/Map'
+import Card from './Components/Cards/Card'
 // @react-google-maps/api
 import Map from './Components/Maps/GoogleMap'
 
@@ -28,7 +29,8 @@ function App() {
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div> */}
-      <Map></Map>
+      {/* <Map></Map> */}
+      <Card></Card>
     </div>
   );
 }
