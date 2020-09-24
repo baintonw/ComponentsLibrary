@@ -5,6 +5,10 @@ import './App.css';
 
 
 // import 'node-sass';
+
+//Containers
+import CardContainer from './Containers/CardContainer'
+
 //Components
 import SignIn from './Components/Login/SignIn'
 import FoodCard from './Components/Cards/FoodCard'
@@ -30,7 +34,11 @@ function App() {
         />
       </div> */}
       {/* <Map></Map> */}
-      <Card></Card>
+      <CardContainer>
+        <Card cardColor="1"></Card>
+        <Card cardColor="2"></Card>
+        <Card cardColor="3"></Card>
+      </CardContainer>
     </div>
   );
 }

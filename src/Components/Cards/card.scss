@@ -5,11 +5,26 @@ html, * {
     // border: 2px solid rgba(125,207,182, .4);
     margin: 5rem auto;
     border-radius: 5px;
-    background: radial-gradient(circle at 55%, rgba(125,207,182, 1), rgba(125,207,182, .6));
     width: 20rem;
     height: 32.36rem;
     overflow: hidden;
     box-shadow: 0 .2rem .2rem rgba(0,0,0,.2), 0 .2rem 1rem rgba(0,0,0,.4);
+
+    &--1 {
+        background: radial-gradient(circle at 55%, #7dcfb6, rgba(125, 207, 182, 0.6));
+    }
+
+    &--2 {
+        background: radial-gradient(circle at 55%, rgba(184, 149, 226, 1), rgba(184, 149, 226, .4));
+
+        
+    }
+    &--3 {
+        background: radial-gradient(circle at 55%, #8FC5F8, rgba(125, 207, 182, 0.6));
+
+        
+    }
+
 
 
     &__image {
@@ -53,17 +68,10 @@ html, * {
     }
 
     &__description {
-        // border: 3px solid palevioletred;
         background-color: inherit;
         padding: 1rem 2rem;
-        // height: 13rem;
-
         font-size: 2rem;
         line-height: 1.6;
         font-weight: 300;
-
-        // border-bottom: 2px solid salmon;
-
-        
     }
 }

@@ -3,9 +3,9 @@ import React from "react"
 //Styles
 import "./card.scss"
 
-const Card = () => {
+const Card = (props) => {
     return (
-        <div className="card">
+        <div className={`card card--${props.cardColor}`}>
             <div className="card__image">
             </div>
             <div className="card__info">
@@ -15,7 +15,6 @@ const Card = () => {
                 <div className="card__quantity">
                     5
                 </div>
-                
             </div>
             <div className="card__owner">
                     Jane Doe
