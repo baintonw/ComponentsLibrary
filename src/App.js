@@ -33,12 +33,12 @@ function App() {
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div> */}
-      {/* <Map></Map> */}
-      <CardContainer>
+      <Map></Map>
+      {/* <CardContainer>
         <Card cardColor="1"></Card>
         <Card cardColor="2"></Card>
         <Card cardColor="3"></Card>
-      </CardContainer>
+      </CardContainer> */}
     </div>
   );
 }
