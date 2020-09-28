@@ -27,7 +27,6 @@ import mapStyles from "./mapStyles"
 
 //Icons
 
-
 //Variables
 const libraries = ["places"]
 const mapContainerStyle = {
